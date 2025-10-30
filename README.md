@@ -1,1 +1,2 @@
 # genmatter-ceramics
+This website acts as an online store and catalogue of my ceramic works. It is connected to my social medias, phone number and email for enquiries. I am able to upload images and text about my practice and the processes involving every piece of art that I choose to share.
