@@ -1,46 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GenMatter Ceramics & Art Store</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>GenMatter Ceramics & Art</h1>
-        <nav>
-            <ul>
-                <li><a href="#catalogue" id="catalogue-tab">Catalogue</a></li>
-                <li><a href="#about" id="about-tab">About</a></li>
-                <li><a href="#contact" id="contact-tab">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="catalogue-section" class="active">
-            <h2>Catalogue</h2>
-            <div id="upload-controls">
-                <input type="file" id="image-upload" multiple accept="image/*">
-                <button id="upload-btn">Upload Images</button>
-            </div>
-            <div id="gallery"></div>
-        </section>
-        <section id="about-section">
-            <h2>About My Practice</h2>
-            <textarea id="about-text" placeholder="Write about your process and philosophy here..."></textarea>
-            <button id="save-about">Save</button>
-        </section>
-        <section id="contact-section">
-            <h2>Contact & Enquiries</h2>
-            <div class="contact-links">
-                <a id="email-link" href="mailto:your-email@example.com">Email Me</a>
-                <a id="instagram-link" href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
-                <a id="twitter-link" href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
-                <!-- Add more social links as needed -->
-            </div>
-        </section>
-    </main>
-    <script src="script.js"></script>
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
