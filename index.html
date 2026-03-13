@@ -37,6 +37,7 @@
       .hero {
         display: flex;
         align-items: flex-start;
+        justify-content: space-between;
         gap: 3rem;
         width: 100%;
       }
@@ -75,6 +76,60 @@
         color: var(--accent);
         white-space: nowrap;
       }
+
+      .hero-main {
+        display: flex;
+        align-items: flex-start;
+        gap: 2.5rem;
+      }
+
+      .menu {
+        position: relative;
+        margin-top: 0.4rem;
+        cursor: pointer;
+      }
+
+      .menu-toggle {
+        width: 26px;
+        height: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .menu-line {
+        height: 2px;
+        border-radius: 999px;
+        background-color: var(--accent);
+      }
+
+      .menu-panel {
+        position: absolute;
+        top: 140%;
+        right: 0;
+        padding: 0.75rem 1.25rem;
+        background-color: #f8f8f8;
+        border-radius: 999px;
+        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+        display: none;
+        white-space: nowrap;
+        font-size: 0.75rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .menu:hover .menu-panel {
+        display: inline-flex;
+        gap: 1.75rem;
+      }
+
+      .menu-item {
+        color: var(--text);
+      }
+
+      .menu-item:hover {
+        color: var(--accent);
+      }
     </style>
   </head>
   <body>
@@ -89,7 +144,22 @@
             matters
           </div>
         </div>
-        <div class="name">GENEVIEVE MATTER</div>
+        <div class="hero-main">
+          <div class="name">GENEVIEVE MATTER</div>
+          <nav class="menu" aria-label="Main navigation">
+            <div class="menu-toggle" aria-hidden="true">
+              <span class="menu-line"></span>
+              <span class="menu-line"></span>
+              <span class="menu-line"></span>
+            </div>
+            <div class="menu-panel">
+              <span class="menu-item">about</span>
+              <span class="menu-item">ceramics</span>
+              <span class="menu-item">prints</span>
+              <span class="menu-item">contact</span>
+            </div>
+          </nav>
+        </div>
       </header>
     </div>
   </body>
