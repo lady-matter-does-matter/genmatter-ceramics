@@ -107,24 +107,25 @@
         position: absolute;
         top: 140%;
         right: 0;
-        padding: 0.75rem 1.25rem;
+        padding: 0.9rem 1.3rem;
         background-color: #f8f8f8;
-        border-radius: 999px;
+        border-radius: 1rem;
         box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
         display: none;
-        white-space: nowrap;
         font-size: 0.75rem;
         letter-spacing: 0.16em;
         text-transform: uppercase;
       }
 
       .menu:hover .menu-panel {
-        display: inline-flex;
-        gap: 1.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
       }
 
       .menu-item {
         color: var(--text);
+        white-space: nowrap;
       }
 
       .menu-item:hover {
