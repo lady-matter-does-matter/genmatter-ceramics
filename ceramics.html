@@ -38,12 +38,86 @@
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        align-items: center;
         padding: 3.5rem 4rem 3rem 3.5rem;
       }
 
-      .title {
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.75rem;
+        width: 100%;
+      }
+
+      .hero-left {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.75rem;
+      }
+
+      .mark {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .logo {
+        width: 72px;
+        height: 72px;
+      }
+
+      .logo img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+      }
+
+      .mark-text {
+        font-size: 0.8rem;
+        line-height: 1.6;
+        text-transform: lowercase;
+        letter-spacing: 0.08em;
+      }
+
+      .hero-main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .site-title {
         margin-top: 0.4rem;
+        font-size: clamp(2.4rem, 4vw, 3.4rem);
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: var(--accent);
+        white-space: nowrap;
+      }
+
+      .menu {
+        cursor: pointer;
+      }
+
+      .menu-toggle {
+        width: 26px;
+        height: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .menu-line {
+        height: 2px;
+        border-radius: 999px;
+        background-color: var(--accent);
+      }
+
+      .content-title {
+        margin-top: 4rem;
+        align-self: center;
         font-size: clamp(2.4rem, 4vw, 3.4rem);
         letter-spacing: 0.35em;
         text-transform: uppercase;
@@ -54,7 +128,31 @@
   </head>
   <body>
     <div class="page">
-      <div class="title">CERAMICS</div>
+      <header class="hero">
+        <div class="hero-left">
+          <a href="./index.html" class="mark">
+            <div class="logo" aria-hidden="true">
+              <img src="./logo.png" alt="Genmatter logo" />
+            </div>
+            <div class="mark-text">
+              creation<br />
+              matters
+            </div>
+          </a>
+          <div class="hero-main">
+            <div class="site-title">GENEVIEVE MATTER</div>
+          </div>
+        </div>
+        <a href="./index.html" class="menu" aria-label="Back to home">
+          <div class="menu-toggle" aria-hidden="true">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+          </div>
+        </a>
+      </header>
+
+      <div class="content-title">CERAMICS</div>
     </div>
   </body>
 </html>
