@@ -155,10 +155,15 @@
       .menu-item {
         color: var(--text);
         white-space: nowrap;
+        text-decoration: none;
+        display: block;
+        transform-origin: left center;
+        transition: transform 150ms ease-out, color 150ms ease-out;
       }
 
       .menu-item:hover {
         color: var(--accent);
+        transform: scale(1.06);
       }
     </style>
   </head>
@@ -186,7 +191,7 @@
             <span class="menu-line"></span>
           </div>
           <div class="menu-panel">
-            <span class="menu-item">about</span>
+            <a class="menu-item" href="./about.html">about</a>
             <span class="menu-item">ceramics</span>
             <span class="menu-item">prints</span>
             <span class="menu-item">contact</span>
