@@ -118,6 +118,15 @@
         cursor: pointer;
       }
 
+      .menu::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        right: -12px;
+        left: -12px;
+        bottom: -56px;
+      }
+
       .menu-toggle {
         width: 26px;
         height: 18px;
@@ -134,7 +143,7 @@
 
       .menu-panel {
         position: absolute;
-        top: 140%;
+        top: 130%;
         right: 0;
         padding: 0.9rem 1.3rem;
         background-color: #f8f8f8;
