@@ -37,8 +37,15 @@
       .hero {
         display: flex;
         align-items: flex-start;
+        justify-content: space-between;
         gap: 1.75rem;
         width: 100%;
+      }
+
+      .hero-left {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.75rem;
       }
 
       .mark {
@@ -103,11 +110,30 @@
         object-fit: cover;
       }
 
-      .mark-menu {
+      .menu {
+        position: relative;
+        margin-top: 0.4rem;
+        cursor: pointer;
+      }
+
+      .menu-toggle {
+        width: 26px;
+        height: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .menu-line {
+        height: 2px;
+        border-radius: 999px;
+        background-color: var(--accent);
+      }
+
+      .menu-panel {
         position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translate(-50%, 0.8rem);
+        top: 140%;
+        right: 0;
         padding: 0.9rem 1.3rem;
         background-color: #f8f8f8;
         border-radius: 1rem;
@@ -118,18 +144,18 @@
         text-transform: uppercase;
       }
 
-      .mark:hover .mark-menu {
+      .menu:hover .menu-panel {
         display: flex;
         flex-direction: column;
         gap: 0.4rem;
       }
 
-      .mark-menu-item {
+      .menu-item {
         color: var(--text);
         white-space: nowrap;
       }
 
-      .mark-menu-item:hover {
+      .menu-item:hover {
         color: var(--accent);
       }
     </style>
@@ -137,24 +163,33 @@
   <body>
     <div class="page">
       <header class="hero">
-        <div class="mark">
-          <div class="logo" aria-hidden="true">
-            <img src="./logo.png" alt="" />
+        <div class="hero-left">
+          <div class="mark">
+            <div class="logo" aria-hidden="true">
+              <img src="./logo.png" alt="" />
+            </div>
+            <div class="mark-text">
+              creation<br />
+              matters
+            </div>
           </div>
-          <div class="mark-text">
-            creation<br />
-            matters
+          <div class="hero-main">
+            <div class="name">GENEVIEVE MATTER</div>
           </div>
-          <nav class="mark-menu" aria-label="Main navigation">
-            <span class="mark-menu-item">about</span>
-            <span class="mark-menu-item">ceramics</span>
-            <span class="mark-menu-item">prints</span>
-            <span class="mark-menu-item">contact</span>
-          </nav>
         </div>
-        <div class="hero-main">
-          <div class="name">GENEVIEVE MATTER</div>
-        </div>
+        <nav class="menu" aria-label="Main navigation">
+          <div class="menu-toggle" aria-hidden="true">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+          </div>
+          <div class="menu-panel">
+            <span class="menu-item">about</span>
+            <span class="menu-item">ceramics</span>
+            <span class="menu-item">prints</span>
+            <span class="menu-item">contact</span>
+          </div>
+        </nav>
       </header>
 
       <section class="gallery" aria-label="Featured ceramics">
