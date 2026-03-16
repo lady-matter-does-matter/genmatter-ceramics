@@ -21,10 +21,6 @@
         transition: transform 200ms ease-out;
       }
 
-      img:hover {
-        transform: scale(2);
-      }
-
       body {
         min-height: 100vh;
         background: var(--bg);
@@ -113,6 +109,11 @@
         position: relative;
         overflow: hidden;
         border-radius: 0.75rem;
+        transition: transform 200ms ease-out;
+      }
+
+      .gallery-item:hover {
+        transform: scale(2);
       }
 
       .gallery-item img {
