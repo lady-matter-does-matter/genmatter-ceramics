@@ -42,17 +42,18 @@
       }
 
       .hero {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
         align-items: center;
-        justify-content: space-between;
-        gap: 1.75rem;
         width: 100%;
+        column-gap: 1.75rem;
       }
 
       .hero-left {
         display: flex;
         align-items: flex-start;
         gap: 1.75rem;
+        justify-content: flex-start;
       }
 
       .mark {
@@ -95,7 +96,6 @@
       }
 
       .hero-main {
-        flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
